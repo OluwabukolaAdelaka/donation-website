@@ -1,0 +1,24 @@
+.logoName {
+  color: #152d77;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.mylinks {
+  cursor: pointer;
+  text-decoration: none;
+  color: #152d77c0 !important;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.mylinks:hover {
+  cursor: pointer;
+  color: #152d77 !important;
+}
+.navBtn {
+  background-color: #152d77df !important;
+}
+.navBtn:hover {
+  background-color: #152d77 !important;
+}
