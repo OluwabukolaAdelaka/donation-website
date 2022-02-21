@@ -32,10 +32,10 @@
 /* hero section */
 .heroSection {
   margin: 2rem auto;
-  padding: 7rem 0rem;
+  padding: 7rem 0rem 2rem 0rem;
 }
 .textPart {
-  padding: 8rem 0rem;
+  padding: 8rem 0rem 4rem 0rem;
 }
 .textPartTitle {
   color: #152d77;
@@ -84,3 +84,42 @@
 .formBtn:hover {
   background-color: #187715;
 }
+
+/* benefit section */
+.benefitSection {
+  padding-bottom: 5rem;
+}
+
+.benefitHeroCon {
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+}
+.benefitHero {
+  color: #152d77;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.benefitText {
+  color: #187715;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.benefitMsg {
+  color: #152d77c7;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.icon {
+  margin-right: 1rem;
+  color: #152d77;
+}
+footer {
+  background-color: #d3d3d6;
+  padding: 5px;
+  margin-bottom: 2rem;
+}
+/* media query */

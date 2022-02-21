@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, Form, FormGroup, Label, Input} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import {BsFillPersonFill} from 'react-icons/bs';
+import {FaMoneyCheckAlt} from 'react-icons/fa';
+import {HiGift} from 'react-icons/hi';
 import Logo from '../assets/logoDonation2.png';
 import { PaystackButton } from 'react-paystack';
 import '../styles/Nav.css';
@@ -112,6 +115,30 @@ const Navigation = () => {
             </div>
             <ToastContainer />
         </div>
+
+        {/* Benefits Section */}
+                <div className='benefitHeroCon'>
+                    <h2 className='benefitHero'>It is not how much we give, but how much love we put into giving.</h2>
+                </div>
+        <div className='row benefitSection'>
+            <div className="col">
+                <h2 className='benefitText'><BsFillPersonFill className='icon'/>Be Kind</h2>
+                <p className='benefitMsg'> Your donation would bring smile on the faces of the recipients.</p>
+            </div>
+            <div className="col">
+                <h2 className='benefitText'><FaMoneyCheckAlt className='icon'/>Give</h2>
+                <p className='benefitMsg'>It makes you the most beautiful in the world no matter what you look like.</p>
+            </div>
+            <div className="col">
+                <h2 className='benefitText'><HiGift className='icon'/>Be a Blessing</h2>
+                <p className='benefitMsg'>Light a lamp for someone and it will also brighten your path.</p>
+            </div>
+        </div>
+
+        {/* footer section */}
+        <footer>
+         <small className='logoName'>BOUNTIQUEDEALS</small> &copy; <span>2022</span>
+        </footer>
     </div>
   )
 }
