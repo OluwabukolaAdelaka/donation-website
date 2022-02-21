@@ -137,7 +137,7 @@ const Navigation = () => {
 
         {/* footer section */}
         <footer>
-         <small className='logoName'>BOUNTIQUEDEALS</small> &copy; <span>2022</span>
+        <span> &copy; 2022</span><small className='logoName'>BOUNTIQUEDEALS</small>
         </footer>
     </div>
   )

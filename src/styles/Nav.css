@@ -122,4 +122,10 @@ footer {
   padding: 5px;
   margin-bottom: 2rem;
 }
+span {
+  color: #187715;
+  margin-left: 5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
 /* media query */
