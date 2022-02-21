@@ -15,13 +15,14 @@ const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
+    const [email, setEmail] = useState('');
+    const [amountd, setAmountD] = useState('');
+
     const config = {
         reference: (new Date()).getTime().toString(),
         publicKey: 'pk_test_e66c082fa2ce37c4432020c36d29268727b458fd',
+        amount: amountd * 100
     };
-    const [email, setEmail] = useState('');
-    const [amount, setAmount] = useState('');
-
    
    const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,20 +35,21 @@ const Navigation = () => {
    // you can call this function anything
    const handlePaystackSuccessAction = (reference) => {
     setEmail("");
-    setAmount("");
+    setAmountD("");
     toast("Received with a grateful heart!");
     console.log(reference);
   };
 
   // you can call this function anything
   const handlePaystackCloseAction = () => {
+    setEmail("");
+    setAmountD("");
     console.log('closed')
   }
 
   const componentProps = {
       ...config,
       email,
-      amount,
       text: 'DONATE',
       onSuccess: (reference) => handlePaystackSuccessAction(reference),
       onClose: handlePaystackCloseAction,
@@ -109,10 +111,10 @@ const Navigation = () => {
                             </Label>
                             <Input
                             id="amount"
-                            name="number"
+                            name="amount"
                             type="text"
-                            value={amount}
-                            onChange={(e) => setAmount(e.target.value)}
+                            value={amountd}
+                            onChange={(e) => setAmountD(e.target.value)}
                             className='formPartInput'
                             />
                         </FormGroup>
