@@ -32,7 +32,7 @@
 /* hero section */
 .heroSection {
   margin: 2rem auto;
-  padding: 7rem 0rem 2rem 0rem;
+  padding: 7rem 1rem 2rem 1rem;
 }
 .textPart {
   padding: 8rem 0rem 4rem 0rem;
@@ -40,6 +40,7 @@
 .textPartTitle {
   color: #152d77;
   font-size: 4rem;
+  padding-bottom: 0.6rem;
   font-weight: bold;
 }
 .textPartMsg {
@@ -47,9 +48,11 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
 .formPartSection {
   padding-top: 2rem;
 }
+
 .formPart {
   background-color: #d3d3d6;
   border-radius: 20px;
@@ -75,6 +78,7 @@
 .formBtn {
   background-color: #152d77;
   color: #fff;
+  margin-top: 1rem;
   padding: 8px 15px;
   border-radius: 5px;
   border: none;
@@ -87,11 +91,11 @@
 
 /* benefit section */
 .benefitSection {
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
 }
 
 .benefitHeroCon {
-  width: 70%;
+  width: 80%;
   justify-content: center;
   text-align: center;
   word-wrap: break-word;
@@ -99,6 +103,7 @@
 .benefitHero {
   color: #152d77;
   padding: 1rem;
+  margin-left: 2rem;
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 2rem;
@@ -123,6 +128,12 @@ footer {
   padding: 5px;
   margin-bottom: 2rem;
 }
+.logoNameFooter {
+  color: #152d77;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
 span {
   color: #187715;
   margin-left: 5rem;
@@ -130,3 +141,71 @@ span {
   font-weight: bold;
 }
 /* media query */
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .heroSection {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 698px) {
+  /* Nav */
+  .mylinks {
+    padding-top: 1rem;
+  }
+  .logoName {
+    display: none;
+  }
+  .heroSection {
+    padding: 3rem 1rem 2rem 1rem;
+  }
+  .textPartTitle {
+    padding-bottom: 0.6rem;
+    font-size: 3rem;
+  }
+  .textPart {
+    padding: 8rem 0rem 2rem 0rem;
+  }
+  .formPartSection {
+    padding-top: 0rem;
+  }
+  .formPart {
+    width: 100% !important;
+    height: auto;
+    margin: 2rem auto;
+    padding: 4rem 0rem 4rem 4rem;
+  }
+  .formPartInput {
+    width: 80% !important;
+  }
+  .benefitHeroCon {
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .benefitHero {
+    color: #152d77;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+  .benefitSection {
+    display: block !important;
+    padding: 1.5rem;
+  }
+  .benefitText {
+    padding-bottom: 0.5rem;
+  }
+  .benefitMsg {
+    padding-bottom: 1rem;
+  }
+  .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.55) !important;
+    border-color: rgba(255, 255, 255, 0.733) !important;
+    outline: rgba(255, 255, 255, 0.733) !important;
+  }
+}

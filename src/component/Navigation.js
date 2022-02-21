@@ -12,6 +12,9 @@ import '../styles/Nav.css';
 
 
 const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
     const config = {
         reference: (new Date()).getTime().toString(),
         publicKey: 'pk_test_e66c082fa2ce37c4432020c36d29268727b458fd',
@@ -54,8 +57,8 @@ const Navigation = () => {
                 <img src={Logo} alt="logo" className='img-fluid'/>
                 <small className='logoName'>BOUNTIQUEDEALS</small>
             </NavbarBrand>
-            <NavbarToggler onClick={function noRefCheck(){}} />
-            <Collapse navbar>
+            <NavbarToggler onClick={toggle} />
+            <Collapse isOpen={isOpen} navbar>
             <Nav
                 className="ms-auto"
                 navbar
@@ -137,7 +140,7 @@ const Navigation = () => {
 
         {/* footer section */}
         <footer>
-        <span> &copy; 2022</span><small className='logoName'>BOUNTIQUEDEALS</small>
+        <span> &copy; 2022</span><small className='logoNameFooter'>BOUNTIQUEDEALS</small>
         </footer>
     </div>
   )
