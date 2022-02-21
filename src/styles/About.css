@@ -1,3 +1,15 @@
+.logo {
+  margin-top: 1rem;
+}
+.logoNameAbout {
+  color: #152d77;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+a {
+  text-decoration: none !important;
+}
 .aboutSection {
   padding-top: 1rem;
   padding-bottom: 2rem;

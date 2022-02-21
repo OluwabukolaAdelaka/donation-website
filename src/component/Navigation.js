@@ -27,6 +27,10 @@ const Navigation = () => {
     e.preventDefault();
    }
 
+   const handleRedirect = () => {
+    toast("Please fill the donation form!");
+   }
+
    // you can call this function anything
    const handlePaystackSuccessAction = (reference) => {
     setEmail("");
@@ -74,7 +78,7 @@ const Navigation = () => {
                     </Link>
                 </NavItem>
             </Nav>
-            <button type="button" className='navBtn me-4'>DONATE</button>
+            <button type="button" onClick={handleRedirect} className='navBtn me-4'>DONATE</button>
             </Collapse>
         </Navbar>
 

@@ -9,7 +9,7 @@ const About = () => {
       <div className="logo">
         <Link to="/">
           <img src={Logo} alt="logo" className='img-fluid'/>
-          <small className='logoName'>BOUNTIQUEDEALS</small>
+          <small className='logoNameAbout'>BOUNTIQUEDEALS</small>
         </Link>
       </div>
       <div className="aboutSection">
