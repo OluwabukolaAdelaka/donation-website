@@ -129,15 +129,15 @@ const Navigation = () => {
                 </div>
         <div className='row benefitSection'>
             <div className="col">
-                <h2 className='benefitText'><BsFillPersonFill className='icon'/>Be Kind</h2>
+                <h2 className='benefitText text-center'><BsFillPersonFill className='icon'/>Be Kind</h2>
                 <p className='benefitMsg'> Your donation would bring smile on the faces of the recipients.</p>
             </div>
             <div className="col">
-                <h2 className='benefitText'><FaMoneyCheckAlt className='icon'/>Give</h2>
+                <h2 className='benefitText text-center'><FaMoneyCheckAlt className='icon'/>Give</h2>
                 <p className='benefitMsg'>It makes you the most beautiful in the world no matter what you look like.</p>
             </div>
             <div className="col">
-                <h2 className='benefitText'><HiGift className='icon'/>Be a Blessing</h2>
+                <h2 className='benefitText text-center'><HiGift className='icon'/>Be a Blessing</h2>
                 <p className='benefitMsg'>Light a lamp for someone and it will also brighten your path.</p>
             </div>
         </div>
