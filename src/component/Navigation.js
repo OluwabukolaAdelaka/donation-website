@@ -1,14 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, Form, FormGroup, Label, Input} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import Logo from '../assets/logoDonation2.png';
+import { PaystackButton } from 'react-paystack';
 import '../styles/Nav.css';
 
 
+
 const Navigation = () => {
+    const config = {
+        reference: (new Date()).getTime().toString(),
+        publicKey: 'pk_test_e66c082fa2ce37c4432020c36d29268727b458fd',
+    };
+    const [email, setEmail] = useState('');
+    const [amount, setAmount] = useState('');
+
+   
    const handleSubmit = (e) => {
     e.preventDefault();
    }
+
+   // you can call this function anything
+   const handlePaystackSuccessAction = (reference) => {
+    setEmail("");
+    setAmount("");
+    toast("Received with a grateful heart!");
+    console.log(reference);
+  };
+
+  // you can call this function anything
+  const handlePaystackCloseAction = () => {
+    console.log('closed')
+  }
+
+  const componentProps = {
+      ...config,
+      email,
+      amount,
+      text: 'DONATE',
+      onSuccess: (reference) => handlePaystackSuccessAction(reference),
+      onClose: handlePaystackCloseAction,
+  };
+
+   
   return (
     <div className='container container-fluid'>
         <Navbar color="light" expand="md" fixed="top" light>
@@ -53,6 +88,8 @@ const Navigation = () => {
                             id="email"
                             name="email"
                             type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className='formPartInput'
                             />
                         </FormGroup>
@@ -64,13 +101,16 @@ const Navigation = () => {
                             id="amount"
                             name="number"
                             type="text"
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
                             className='formPartInput'
                             />
                         </FormGroup>
-                        <button type="button" className='formBtn me-4'>DONATE</button>
+                        <PaystackButton  {...componentProps}  className='formBtn me-4'/>
                     </Form>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     </div>
   )
